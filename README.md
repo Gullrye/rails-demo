@@ -22,3 +22,10 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+
+## link_to delete not working
+
+```bash
+rails importmap:install
+rails turbo:install stimulus:install
+```
