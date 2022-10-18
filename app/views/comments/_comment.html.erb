@@ -1,0 +1,29 @@
+<% unless comment.archived? %>
+  <div class='comment-box'>
+    <p>
+      <strong>Commenter:</strong>
+      <%= comment.commenter %>
+    </p>
+
+    <p>
+      <strong>Comment:</strong>
+      <%= comment.body %>
+    </p>
+
+    <p>
+      <%= link_to "Destroy Comment", [comment.article, comment], data: {
+        turbo_method: :delete,
+        turbo_confirm: "Are you sure?"
+      } %>
+    </p>
+  </div>
+<% end %>
+
+
+<style>
+.comment-box {
+  padding: 5px;
+  border: 1px solid #666;
+  margin-bottom: 10px;
+}
+</style>
